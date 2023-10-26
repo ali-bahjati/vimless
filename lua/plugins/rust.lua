@@ -38,8 +38,8 @@ return function(config)
                         end,
 
                         settings = {
-                            ["rust-analyzer"] = {
-                                checkOnSave = {
+                            ['rust-analyzer'] = {
+                                check = {
                                     command = 'clippy'
                                 }
                             }

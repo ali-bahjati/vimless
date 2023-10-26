@@ -9,6 +9,8 @@
 -- that upgrades should be as easy as `git pull --rebase` to apply your config
 -- to whatever the latest vimless is.
 
+vim.env.PATH = '/Users/ali/.nix-profile/bin:' .. vim.env.PATH
+
 return {
     -- Vimless Options
     -- ------------------------------------------------------------------------------------
@@ -22,6 +24,9 @@ return {
         { 'will133/vim-dirdiff' },
         { 'ojroques/vim-oscyank', branch = 'main'},
         { 'yorickpeterse/nvim-pqf', opts = {} },
+        'LnL7/vim-nix',
+        { 'eraserhd/parinfer-rust', build = 'cargo build --release' },
+        { 'hashivim/vim-terraform' }
     },
 
     -- Plugin Control
@@ -41,6 +46,7 @@ return {
         circles           = true,
         cmp               = true,
         conform           = true,
+        copilot           = true,
         diffview          = true,
         dirbuf            = true,
         fidget            = true,
@@ -62,7 +68,9 @@ return {
         surround          = true,
         telescope         = true,
         todo_comments     = true,
-        toggleterm        = true,
+        toggleterm        = {
+            shell = "zsh"
+        },
         treesitter        = true,
         trouble           = true,
         tusk              = true,

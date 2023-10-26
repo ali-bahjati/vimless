@@ -34,7 +34,7 @@ return function(config)
 
                     tusk = require 'telescope.themes'.get_dropdown {
                         border        = true,
-                        layout_config = { height = 15, width = { padding = 0 }, anchor = 'N' },
+                        layout_config = { height = 15, width = { 0.9999, max = 350 }, anchor = 'N' },
                         borderchars   = {
                             prompt  = { ' ', '', ' ', '', '', '', '', '' },
                             results = { ' ', '', '─', '', '', '', '', '' },
@@ -44,7 +44,7 @@ return function(config)
 
                     ['ui-select'] = require 'telescope.themes'.get_dropdown {
                         border        = true,
-                        layout_config = { height = 15, width = { padding = 0 }, anchor = 'N' },
+                        layout_config = { height = 15, width = { 0.9999, max = 350 }, anchor = 'N' },
                         borderchars   = {
                             prompt  = { ' ', '', ' ', '', '', '', '', '' },
                             results = { ' ', '', '─', '', '', '', '', '' },
@@ -55,7 +55,7 @@ return function(config)
                     tmux = {
                         layout_config = require 'telescope.themes'.get_dropdown {
                             border        = true,
-                            layout_config = { height = 15, width = { padding = 0 }, anchor = 'N' },
+                            layout_config = { height = 15, width = { 0.9999, max = 350 }, anchor = 'N' },
                             borderchars   = {
                                 prompt  = { ' ', '', ' ', '', '', '', '', '' },
                                 results = { ' ', '', '─', '', '', '', '', '' },
@@ -74,7 +74,7 @@ return function(config)
                 defaults = require 'telescope.themes'.get_dropdown {
                     border           = true,
                     color_devicons   = true,
-                    layout_config = { height = 15, width = { padding = 0 }, anchor = 'N' },
+                    layout_config = { height = 15, width = { 0.9999, max = 350 }, anchor = 'N' },
                     path_display     = { 'absolute' },
                     sorting_strategy = 'ascending',
                     borderchars      = {
@@ -111,7 +111,7 @@ return function(config)
             local file_browser = require 'telescope'.extensions.file_browser
             local ast_grep     = require 'telescope'.extensions.ast_grep
             local ivy_bufs     = require 'telescope.themes'.get_dropdown {
-                layout_config         = { height = 15, width = 0.9999, anchor = 'N' },
+                layout_config         = { height = 15, width = { 0.9999, max = 350 }, anchor = 'N' },
                 border                = true,
                 ignore_current_buffer = true,
                 sort_mru              = true,

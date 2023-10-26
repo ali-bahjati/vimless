@@ -20,6 +20,7 @@ return function(config)
                 },
                 win_options = {
                     signcolumn = "yes",
+                    conceallevel = 0,
                 },
                 float = {
                     border      = 'single',
@@ -34,6 +35,9 @@ return function(config)
                     win_options = {
                         winblend = 0
                     },
+                },
+                view_options = {
+                    show_hidden = true,
                 },
             }
 

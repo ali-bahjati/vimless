@@ -1,6 +1,7 @@
 -- Toggleterm provides floating terminals that can be toggled on and off. The
 -- default vimless configuration for this is a full screen floating terminal
 -- that can be opened/close with Ctrl+\
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 return function(config)
     if type(config.plugins.toggleterm) == 'boolean' and not config.plugins.toggleterm then
@@ -15,14 +16,13 @@ return function(config)
                 config.plugins.toggleterm()
             else
                 local opts = {
-                    size            = 20,
-                    open_mapping    = "<c-\\>",
-                    shell           = 'bash',
-                    shade_terminals = false,
-                    direction       = 'horizontal',
-                    float_opts = {
-                        width    = vim.o.columns,
-                        size     = vim.o.lines - 1,
+                    size         = 40,
+                    open_mapping = "<c-\\>",
+                    shell        = 'bash',
+                    direction    = 'float',
+                    float_opts   = {
+                        width    = math.min(350, vim.o.columns),
+                        height   = vim.o.lines - 1,
                         border   = 'none',
                         winblend = 0,
                     }
