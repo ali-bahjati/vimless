@@ -88,7 +88,14 @@ return function(config)
                             ["<esc>"] = require 'telescope.actions'.close,
                         },
                     },
-                }
+                },
+
+                pickers = {
+                    find_files = {
+                        -- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
+                        find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+                    },
+            	},
             }
 
             if config.plugins.telescope and type(config.plugins.telescope) == 'table' then

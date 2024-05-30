@@ -1,6 +1,6 @@
 return function(config)
     if type(config.plugins.todo_comments) == 'boolean' and not config.plugins.todo_comments then
-        return
+        return {}
     end
 
     return {

@@ -6,6 +6,7 @@ return function(config)
     return {
         'nvim-treesitter/nvim-treesitter',
         build        = ':TSUpdate',
+        priority     = 800,
         dependencies = {
             'nvim-treesitter/nvim-treesitter-textobjects',
         },

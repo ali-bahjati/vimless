@@ -9,8 +9,6 @@
 -- that upgrades should be as easy as `git pull --rebase` to apply your config
 -- to whatever the latest vimless is.
 
-vim.env.PATH = '/Users/ali/.nix-profile/bin:' .. vim.env.PATH
-
 return {
     -- Vimless Options
     -- ------------------------------------------------------------------------------------
@@ -21,12 +19,12 @@ return {
     -- Additional plugins can be added using the iackage syntax provided by lazy.nvim
     -- ------------------------------------------------------------------------------------
     custom = {
-        { 'will133/vim-dirdiff' },
-        { 'ojroques/vim-oscyank', branch = 'main'},
+        { 'vhyrro/luarocks.nvim', priority = 1000, config = true },
+        -- { 'ojroques/vim-oscyank', branch = 'main'},
         { 'yorickpeterse/nvim-pqf', opts = {} },
-        'LnL7/vim-nix',
-        { 'eraserhd/parinfer-rust', build = 'cargo build --release' },
-        { 'hashivim/vim-terraform' }
+        -- 'LnL7/vim-nix',
+        -- { 'eraserhd/parinfer-rust', build = 'cargo build --release' },
+        -- { 'hashivim/vim-terraform' },
     },
 
     -- Plugin Control
@@ -41,8 +39,6 @@ return {
     -- ------------------------------------------------------------------------------------
     plugins = {
         -- Enabled Plugins
-        ccc               = true,
-        chatgpt           = true,
         circles           = true,
         cmp               = true,
         conform           = true,
@@ -53,21 +49,19 @@ return {
         flash             = true, -- Conflicts with `leap`, enable only one or the other.
         fugitive          = true,
         gitsigns          = true,
-        hlchunk           = true,
         hydra             = true,
-        lazygit           = true,
         lspconfig         = true,
         marks             = true,
         neogit            = true,
-        neotest           = true,
-        neotree           = true,
-        nvim_tree         = true,
+        neotest           = false,
+        neotree           = false,
+        nvim_tree         = false,
         nvim_web_devicons = true,
-        octo              = true,
+        octo              = false,
         quickscope        = true,
         surround          = true,
         telescope         = true,
-        todo_comments     = true,
+        todo_comments     = false,
         toggleterm        = {
             shell = "zsh"
         },
@@ -128,12 +122,13 @@ return {
         indent_blankline  = false,
         leap              = false, -- Conflicts with `flash`, enable only one or the other.
         lualine           = false,
-        mind              = false,
         oil               = false,
         onedark           = false,
         targets           = false,
         tokyonight        = false,
         vinegar           = false,
+
+        neorg             = true,
 
         -- Example for overriding options for a hypothetical plugin located in
         -- plugins/foo.lua

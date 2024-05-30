@@ -45,6 +45,7 @@ return function(config)
                     c               = true,
                     csharp          = true,
                     dart            = true,
+                    dockerfile      = true,
                     elixir          = true,
                     erlang          = true,
                     fennel          = true,

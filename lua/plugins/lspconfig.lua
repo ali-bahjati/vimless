@@ -81,6 +81,20 @@ return function(config)
                 -- instead, rust-tools is much more integrated.
                 rust_analyzer = function()
                 end,
+
+                -- Setup clangd
+                clangd = function()
+                    require 'lspconfig'.clangd.setup {
+                        cmd = {
+                            "clangd",
+                            "--background-index",
+                            "--header-insertion=iwyu",
+                            "--query-driver=/usr/bin/clang",
+                            "--all-scopes-completion",
+                            "--completion-style=detailed"
+                        },
+                    }
+                end,
             }
 
             -- Sign Overrides

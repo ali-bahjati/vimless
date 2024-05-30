@@ -3,8 +3,10 @@ local M = {
     hint_options = {
         position = 'top-right',
         offset   = 0,
-        border   = {
-            '│', '', '', '', '', '', '', '│',
+        float_opts = {
+            border   = {
+                '│', '', '', '', '', '', '', '│',
+            },
         },
     },
 

@@ -4,7 +4,7 @@ return function(config)
     end
 
     return {
-        'anuvyklack/hydra.nvim',
+        'nvimtools/hydra.nvim',
         priority     = 900, -- Load Early.
         dependencies = { 'nvim-lua/plenary.nvim', },
         config = function()
