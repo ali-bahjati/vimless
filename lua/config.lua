@@ -121,7 +121,6 @@ return {
         harpoon           = false,
         indent_blankline  = false,
         leap              = false, -- Conflicts with `flash`, enable only one or the other.
-        lualine           = false,
         oil               = false,
         onedark           = false,
         targets           = false,
