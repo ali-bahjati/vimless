@@ -70,7 +70,7 @@ return {
         tusk              = true,
         twilight          = true,
         vim_repeat        = true,
-        which_key         = true,
+        which_key         = false,
         zen               = true,
 
         mini = {
