@@ -65,7 +65,7 @@ return function(config)
                         upgrade    = "  %s",
                         error      = "  Error fetching crate",
                     },
-                    src = {
+                    completion = {
                         text = {
                             prerelease = "  pre-release ",
                             yanked     = "  yanked ",
